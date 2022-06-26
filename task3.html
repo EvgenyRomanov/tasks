@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="user-region">8-800-DIGITS</div> 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU"></script>
+    <script>
+        ymaps.ready(function() {
+
+            if (ymaps.geolocation.region == 'Москва и Московская область') {
+                $("#user-region").text("8-800-123-45-67");
+            }
+
+        });        
+    </script>
+ 
+</body>
+</html>
